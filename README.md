@@ -12,6 +12,18 @@ The C2 host is raven0 ([raven0 C2 setup](#raven0-c2-setup)), each of the others 
 
 ---
 
+#Disclainer
+Pen testing is inherintly risky; know your bounds and limits.
+This project has only been tested using the following hardware: 
+* [Raspberry Pi 5 with 8GB RAM](https://www.amazon.com/dp/B0DMLHFQQN/?coliid=IL9W9CCWJSS7V&colid=36ZTS9WRSIRJ4&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it)
+* [Anker 45W USB C Charger Block and Cable](https://www.amazon.com/dp/B0CQ4P2T8H/?coliid=I3KKL8CWOO163B&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
+* [Samsung PM9A1a 512GB PCIe Gen4x4 NVMe SSD M.2 2280 Model: MZ-VL2512B (PM9A1a) OEM](https://www.amazon.com/dp/B0DXM82L47/?coliid=I3L2MTH6D5EUMV&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
+* [Argon NEO 5 M.2 NVME PCIE Case with Built-in Fan](https://www.amazon.com/dp/B0CRH8V95R/?coliid=INL9L1KGOF2J2&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
+* [ALFA AWUS036AXML 802.11axe WiFi 6E USB 3.0 Adapter AXE3000, Tri Band 6 GHz, Gigabit Speed up to 3Gbps, TAA Compliant](https://www.amazon.com/dp/B0BY8GMW32/?coliid=IKGQFI7U3TEHW&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
+* [CONMDEX 1ft USB 3.1 Gen 2 USB C Charger Cable](https://www.amazon.com/dp/B0CLXZHC5R/?coliid=IGOHIJITKYW5J&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
+* [M3 Command Strips](https://www.amazon.com/dp/B07P32RHQ4/?coliid=I1FER4FSGP80C3&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it) - used for mounting RPis to walls as needed. Stick to the plastic part of the bottom of the NEO cases, not the aluminum, for better adhesion when the case gets warm.
+---
+
 While IPs assigned by ISP's seldom rotate, they do in fact rotate. If your statement of work and accompanying authorization is for specific ranges of IPs, and one of the target networks get a new IP lease, you may end up targeting an IP range you aren't authorized for.
 
 Phishing is the dominant vector for real-world breach initiation, and it is included in all RCG's engagements unless explicitly prohibited in the SoW or authorization. However, phishing does have a non-zero failure rate and even if the target opens the phish and clicks through, technical issues can prevent success. Joining a raven to each network allows pen test data collection and analysis to begin immediately while phishing and other work moves forward in parallel.
