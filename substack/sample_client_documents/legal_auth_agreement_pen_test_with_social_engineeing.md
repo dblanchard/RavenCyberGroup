@@ -16,11 +16,13 @@ Subcontractor to: Copperhead Consulting
 
 **AUTHORIZING PARTIES:**  
 *Client IT / Information Security*
+
 Name: _________________________________  
 Title: _________________________________  
 Company: _________________________________  
 
 *Resident*
+
 Name: _________________________________  
 Title: _________________________________  
 Company: _________________________________  
