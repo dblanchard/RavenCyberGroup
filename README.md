@@ -1,32 +1,47 @@
 # An Unkindness of Ravens
-
-This project supports penetration testing of executives' home networks.
-
-It is comprised of a collection of Raspberry Pis (see [disclaimer](#disclaimer)), one for each remote location and one hosting command and control (C2) that the remotes all phone home to via [Tailscale](https://tailscale.com).
+![License](https://img.shields.io/github/license/dblanchard/RavenCyberGroup?color=blue)
+![Issues](https://img.shields.io/github/issues/dblanchard/RavenCyberGroup)
+![Last Commit](https://img.shields.io/github/last-commit/dblanchard/RavenCyberGroup)
+![Language](https://img.shields.io/github/languages/top/dblanchard/RavenCyberGroup)
 
 The collective noun for ravens is an _unkindness_, _conspiracy_, _treachery_, or _rave_. The latter three all have their own baggage, so this flock is an **unkindness**.
 
-The C2 host is raven0 ([raven0 C2 setup](#raven0-c2-setup)), each of the others is raven***n***, where *n* is assigned automatically by ([remote raven setup](#remote-raven-setup)). Each remote needs to be added to the target network, which is an acknowledged shortcut of the initial attack vectors, e.g. phishing attack. This is for two reasons:
-* Legal considerations
-* Time considerations
+This project supports penetration testing of executives' home networks. See [special legal considerations for testing home networks]()
+
+It is comprised of a collection of Raspberry Pis, called ravens (see [disclaimer](#disclaimer)). I deploy one raven at each remote location and have one at the office hosting command and control (C2) for the remotes to phone home to via [Tailscale](https://tailscale.com).
+
+## Architecture Overview
+
+- `raven0` is the C2 host ([see raven0 setup](#raven0-c2-setup))
+- `raven***n***` are the remote agents ([see remote setup](#remote-raven-setup))
+- Each remote must be manually added to the target network (a shortcut past initial access methods like phishing)
+
+### Why skip initial access?
+
+The C2 host is raven0 ([raven0 C2 setup](#raven0-c2-setup)), each of the others is raven***n***, where *n* is assigned automatically by ([remote raven setup](#remote-raven-setup)). Each remote needs to be added to the target network, which I acknowledged shortcuts the initial attack vectors, e.g. phishing attack. This is for two reasons:
+* Legal considerations: inserting a pre-approved device is cleaner and safer
+* Time considerations: data collection and pivoting start immediately while the phishing campaign runs in parallel
+
+While IPs assigned by ISPs seldom rotate, it would wreck you for them rotate on you leaving you targeting network you aren't authorized for. If your statement of work and accompanying authorization is for specific ranges of IPs, and one of the target networks get a new IP lease, you won't have any way of knowing the issue.
+
+Phishing is the dominant vector for real-world breach initiation, and it is included in all RCG's engagements unless explicitly prohibited in the SoW or authorization. However, phishing does have a non-zero failure rate and even if the target opens the phish and clicks through, technical issues can prevent success. Joining a raven to each network allows pen test data collection and analysis to begin immediately while phishing and other work moves forward in parallel.
 
 ---
 
 # Disclaimer
-Pen testing is inherintly risky; know your bounds and limits.
+Pen testing is inherintly risky; know the bounds of your SoW and authorization and know your personal limits.
 This project has only been tested using the following hardware: 
 * [Raspberry Pi 5 with 8GB RAM](https://www.amazon.com/dp/B0DMLHFQQN/?coliid=IL9W9CCWJSS7V&colid=36ZTS9WRSIRJ4&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it)
-* [Anker 45W USB C Charger Block and Cable](https://www.amazon.com/dp/B0CQ4P2T8H/?coliid=I3KKL8CWOO163B&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
-* [Samsung PM9A1a 512GB PCIe Gen4x4 NVMe SSD M.2 2280 Model: MZ-VL2512B (PM9A1a) OEM](https://www.amazon.com/dp/B0DXM82L47/?coliid=I3L2MTH6D5EUMV&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
-* [Argon NEO 5 M.2 NVME PCIE Case with Built-in Fan](https://www.amazon.com/dp/B0CRH8V95R/?coliid=INL9L1KGOF2J2&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
-* [ALFA AWUS036AXML 802.11axe WiFi 6E USB 3.0 Adapter AXE3000, Tri Band 6 GHz, Gigabit Speed up to 3Gbps, TAA Compliant](https://www.amazon.com/dp/B0BY8GMW32/?coliid=IKGQFI7U3TEHW&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
+* [Anker 45W USB C Charger Block](https://www.amazon.com/dp/B0CQ4P2T8H/?coliid=I3KKL8CWOO163B&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
+* [Samsung PM9A1a 512GB NVMe SSD M.2](https://www.amazon.com/dp/B0DXM82L47/?coliid=I3L2MTH6D5EUMV&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
+* [Argon NEO 5 M.2 NVME Case with Built-in Fan](https://www.amazon.com/dp/B0CRH8V95R/?coliid=INL9L1KGOF2J2&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
+* [ALFA AWUS036AXML Wi-Fi Adapter](https://www.amazon.com/dp/B0BY8GMW32/?coliid=IKGQFI7U3TEHW&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
 * [CONMDEX 1ft USB 3.1 Gen 2 USB C Charger Cable](https://www.amazon.com/dp/B0CLXZHC5R/?coliid=IGOHIJITKYW5J&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it)
 * [M3 Command Strips](https://www.amazon.com/dp/B07P32RHQ4/?coliid=I1FER4FSGP80C3&colid=36ZTS9WRSIRJ4&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it) - used for mounting RPis to walls as needed. Stick to the plastic part of the bottom of the NEO cases, not the aluminum, for better adhesion when the case gets warm.
+
+In all, the hardware ran me about US$310/raven in mid-2025.
+
 ---
-
-While IPs assigned by ISP's seldom rotate, they do in fact rotate. If your statement of work and accompanying authorization is for specific ranges of IPs, and one of the target networks get a new IP lease, you may end up targeting an IP range you aren't authorized for.
-
-Phishing is the dominant vector for real-world breach initiation, and it is included in all RCG's engagements unless explicitly prohibited in the SoW or authorization. However, phishing does have a non-zero failure rate and even if the target opens the phish and clicks through, technical issues can prevent success. Joining a raven to each network allows pen test data collection and analysis to begin immediately while phishing and other work moves forward in parallel.
 
 # Setup
 ## All Raspberry Pis
@@ -37,18 +52,6 @@ After running the [QA script](#all-raspberry-pis), run the [raven0 C2 setup](htt
 
 ## remote raven setup
 After running the [QA script](#all-raspberry-pis), run the [remote raven setup](https://github.com/dblanchard/RavenCyberGroup/tree/main/remote%20raven%20setup)] script.
-
-## Architecture Overview
-
-- `raven0` is the **C2 host** ([see raven0 setup](#raven0-c2-setup))
-- `raven_n` are the **remote agents** ([see remote setup](#remote-raven-setup))
-- Each remote must be manually added to the target network (a shortcut past initial access methods like phishing)
-
-### Why skip initial access?
-
-This approach is deliberate for two reasons:
-- **Legal considerations** — inserting a device is often cleaner and pre-approved
-- **Time efficiency** — you can start data collection and pivoting while phishing attempts run in parallel
 
 ---
 
@@ -64,15 +67,10 @@ Phishing is the dominant real-world initial access vector. It is **included in a
 
 But phishing has a non-zero failure rate. Even if the target clicks through, technical issues may block payload execution. That’s why **deploying ravens upfront** accelerates visibility and persistence while other attack chains proceed.
 
----
+# Special Legal Considerations for Testing Home Networks
+Your SoW and your authorization must both be approved and signed by the owner/operator of the home network or their counsel. Approval by corporate counsel is insufficient unless the home network is operated by the company. See my [sample SoW](???) and [sample authorization](???), provided only for reference, not as legal advice.
 
-# An Unkindness of Ravens
-
-![License](https://img.shields.io/github/license/dblanchard/RavenCyberGroup?color=blue)
-![Issues](https://img.shields.io/github/issues/dblanchard/RavenCyberGroup)
-![Last Commit](https://img.shields.io/github/last-commit/dblanchard/RavenCyberGroup)
-![Language](https://img.shields.io/github/languages/top/dblanchard/RavenCyberGroup)
-
+As stated earlier, care must be given to not stray from the approved target network if the IP leaes changes.
 ---
 
 ## ⚠️ Operational Considerations
