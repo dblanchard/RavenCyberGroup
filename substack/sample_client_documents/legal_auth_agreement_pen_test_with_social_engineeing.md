@@ -74,7 +74,6 @@ This authorization is intended to provide complete legal protection under:
 
 **HOUSEHOLD PERSONNEL:**
 - [ ] Executive family members (adults 18+ only)
-  Names of family members hereby excluded: ___________________________________________________________________________________________________
 - [ ] Household staff (cleaners, nannies, gardeners, maintenance)
 - [ ] Executive assistants working from home
 - [ ] Security personnel
@@ -83,9 +82,9 @@ This authorization is intended to provide complete legal protection under:
 ### 2.2 Explicitly Prohibited Targets
 
 **EXCLUDED FROM ALL TESTING:**
-- [X] All individuals under 18 years of age
-- [ ] Specific family members: _________________________________
-- [ ] Specific staff members: _________________________________
+- [X] All individuals under 18 years of age: __________________________________________________________________
+- [ ] Specific family members: __________________________________________________________________
+- [ ] Specific staff members: __________________________________________________________________
 - [ ] Other exclusions: _________________________________
 
 ## 3. SCOPE LIMITATIONS
