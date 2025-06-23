@@ -1,12 +1,16 @@
-This project supports pen testing executives' home networks.
+# An Unkindness of Ravens
 
-It is comprised of a collection of Raspberry Pis, one for each remote location and one the remotes all phone home to setting up command and control via Tailscale.
+This project supports penetration testing of executives' home networks.
 
-The collective noun for ravens is an "unkindness", "conspiracy", "treachery", or "rave." The latter three all have their own baggage, so this flock is an unkindness.
+It is comprised of a collection of Raspberry Pis (see [disclaimer](#disclaimer)), one for each remote location and one hosting command and control (C2) that the remotes all phone home to via [Tailscale](https://tailscale.com).
+
+The collective noun for ravens is an _unkindness_, _conspiracy_, _treachery_, or _rave_. The latter three all have their own baggage, so this flock is an **unkindness**.
 
 The C2 host is raven0 ([raven0 C2 setup](#raven0-c2-setup)), each of the others is raven***n***, where *n* is assigned automatically by ([remote raven setup](#remote-raven-setup)). Each remote needs to be added to the target network, which is an acknowledged shortcut of the initial attack vectors, e.g. phishing attack. This is for two reasons:
 * Legal considerations
 * Time considerations
+
+---
 
 While IPs assigned by ISP's seldom rotate, they do in fact rotate. If your statement of work and accompanying authorization is for specific ranges of IPs, and one of the target networks get a new IP lease, you may end up targeting an IP range you aren't authorized for.
 
@@ -17,22 +21,10 @@ Phishing is the dominant vector for real-world breach initiation, and it is incl
 Run the [QA script](#???link to script)
 
 ## raven0 C2 setup
-After running the [QA script](#all-raspberry-pis), run the [ script](#???link to script)]
+After running the [QA script](#all-raspberry-pis), run the [raven0 C2 setup](https://github.com/dblanchard/RavenCyberGroup/tree/main/raven0%20C2%20setup)] script.
 
 ## remote raven setup
-After running the [QA script](#all-raspberry-pis), run the [ script](#???link to script)]
-
-
-
-# An Unkindness of Ravens
-
-This project supports penetration testing of executives' home networks.
-
-It is comprised of a collection of Raspberry Pis — one for each remote location and one acting as command and control (C2) that the remotes all phone home to via [Tailscale](https://tailscale.com).
-
-The collective noun for ravens is an _unkindness_, _conspiracy_, _treachery_, or _rave_. The latter three all have their own baggage, so this flock is an **unkindness**.
-
----
+After running the [QA script](#all-raspberry-pis), run the [remote raven setup](https://github.com/dblanchard/RavenCyberGroup/tree/main/remote%20raven%20setup)] script.
 
 ## Architecture Overview
 
@@ -62,44 +54,12 @@ But phishing has a non-zero failure rate. Even if the target clicks through, tec
 
 ---
 
-## 🧠 Project Setup
-
-- 📁 `/raven0 C2 setup` — setup instructions and configs for the command and control Pi
-- 📁 `/remote raven setup` — deployment script and hardening for remote units
-- 📁 `/shared/` — common files used by both C2 and agents
-
----
-
-## raven0 C2 setup
-
-> [Add your setup instructions here or link to the relevant markdown]
-
----
-
-## remote raven setup
-
-> [Add your setup instructions here or link to the relevant markdown]
-
-
-
 # An Unkindness of Ravens
 
 ![License](https://img.shields.io/github/license/dblanchard/RavenCyberGroup?color=blue)
 ![Issues](https://img.shields.io/github/issues/dblanchard/RavenCyberGroup)
 ![Last Commit](https://img.shields.io/github/last-commit/dblanchard/RavenCyberGroup)
 ![Language](https://img.shields.io/github/languages/top/dblanchard/RavenCyberGroup)
-
-This project supports penetration testing of executives' home networks via a network of Raspberry Pis deployed to each target location. Each unit automatically connects to a central command and control (C2) node using [Tailscale](https://tailscale.com).
-
-> The collective noun for ravens is an **unkindness** — fitting, focused, and quietly ominous.
-
----
-
-## 🧱 Architecture Overview
-
-- `raven0`: Command and control Pi — deployed to your red team or SOC location
-- `raven_n`: Remote Pis — deployed to client environments
-- All nodes connect to a private Tailscale tailnet and use mutual authentication
 
 ---
 
@@ -136,7 +96,7 @@ Components:
 
 Setup Steps:
 
-    Burn RPi OS to SD card
+    Burn RPi OS to SSD (not tested with SD cards)
 
     Configure tailscale-setup.sh with an auth key
 
@@ -172,8 +132,6 @@ All contributions are welcome — forks, pull requests, or ideas. Open an issue 
 
 This project is licensed under the MIT License.
 © 2025 Duane Blanchard. Attribution required, commercial use permitted.
-
-
 
 🔮 Coming Soon
 
