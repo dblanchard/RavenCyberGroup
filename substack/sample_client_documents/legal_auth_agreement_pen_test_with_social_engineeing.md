@@ -30,6 +30,7 @@ Address: _________________________________
 I, _________________________________ ("Authorizing Party"), hereby provide explicit written authorization to Raven Cybersecurity and Digital Investigations and its designated personnel to conduct penetration testing activities on the network infrastructure and connected devices located at:
 
 **PROPERTY ADDRESS:**  
+_____________________________
 _________________________________  
 _________________________________  
 
