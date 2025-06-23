@@ -12,7 +12,7 @@ The C2 host is raven0 ([raven0 C2 setup](#raven0-c2-setup)), each of the others 
 
 ---
 
-#Disclainer
+# Disclainer
 Pen testing is inherintly risky; know your bounds and limits.
 This project has only been tested using the following hardware: 
 * [Raspberry Pi 5 with 8GB RAM](https://www.amazon.com/dp/B0DMLHFQQN/?coliid=IL9W9CCWJSS7V&colid=36ZTS9WRSIRJ4&psc=0&ref_=list_c_wl_lv_ov_lig_dp_it)
