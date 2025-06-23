@@ -14,12 +14,18 @@ Raven Cybersecurity and Digital Investigations
 Registered in Washington State  
 Subcontractor to: Copperhead Consulting  
 
-**AUTHORIZING PARTY:**  
+**AUTHORIZING PARTIES:**  
+*Client IT / Information Security*
+Name: _________________________________  
+Title: _________________________________  
+Company: _________________________________  
+
+*Resident*
 Name: _________________________________  
 Title: _________________________________  
 Company: _________________________________  
 Home Address: _________________________________  
-_________________________________  
+_________________________________
 
 **PROPERTY OWNER** (if different from above):  
 Name: _________________________________  
@@ -27,7 +33,7 @@ Address: _________________________________
 
 ## 1. EXPLICIT AUTHORIZATION
 
-I, _________________________________ ("Authorizing Party"), hereby provide explicit written authorization to Raven Cybersecurity and Digital Investigations and its designated personnel to conduct penetration testing activities on the network infrastructure and connected devices located at:
+I, _________________________________ ("Authorizing Party"), hereby provide explicit written authorization to Raven Cybersecurity and Digital Investigations and its designated personnel to conduct penetration testing activities on the network infrastructure including work/corporate VPN connections and connected devices located at:
 
 **PROPERTY ADDRESS:**  
 _____________________________
@@ -85,7 +91,7 @@ This authorization is intended to provide complete legal protection under:
 - [X] All individuals under 18 years of age: __________________________________________________________________
 - [ ] Specific family members: __________________________________________________________________
 - [ ] Specific staff members: __________________________________________________________________
-- [ ] Other exclusions: _________________________________
+- [ ] Other exclusions: __________________________________________________________________
 
 ## 3. SCOPE LIMITATIONS
 
@@ -93,23 +99,23 @@ This authorization is intended to provide complete legal protection under:
 
 **MEDICAL DEVICES:**
 List all medical devices, monitoring equipment, or health-related technology:
-_________________________________
-_________________________________
+_____________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________
 
 **CHILDREN'S DEVICES:**
 List all devices primarily used by minors:
-_________________________________
-_________________________________
+_____________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________
 
 **OTHER EXCLUSIONS:**
-_________________________________
-_________________________________
+_____________________________________________________________________________________________________________________________________________________________________
+_____________________________________________________________________________________________________________________________________________________________________
 
 ### 3.2 Network Limitations
 
 **CONNECTED NETWORKS EXCLUDED:**
 - [ ] Guest networks: _________________________________
-- [ ] Work/corporate VPN connections
+- [ ] Work/corporate VPN connections: _________________________________
 - [ ] Neighbor shared networks
 - [ ] Other: _________________________________
 
@@ -120,7 +126,7 @@ _________________________________
 **COMMENCEMENT DATE:** _________________ [TO BE FILLED AT SIGNING]  
 **EXPIRATION DATE:** 120 days from commencement date  
 **TESTING PERIOD:** First 90 days  
-**REMEDIATION PERIOD:** Final 30 days  
+**REMEDIATION TESTING PERIOD:** Final 30 days  
 
 ### 4.2 Time Restrictions
 
