@@ -1,0 +1,1 @@
+After running the QA script, run this script on the RPis that will be remote (raven1 through raven***n***)

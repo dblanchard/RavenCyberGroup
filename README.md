@@ -4,7 +4,7 @@ It is comprised of a collection of Raspberry Pis, one for each remote location a
 
 The collective noun for ravens is an "unkindness", "conspiracy", "treachery", or "rave." The latter three all have their own baggage, so this flock is an unkindness.
 
-The C2 host is raven0 ([raven0 C2 setup](#raven0-c2-setup)), each of the others is raven*n*, where *n* is assigned automatically by ([remote raven setup](#remote-raven-setup)). Each remote needs to be added to the target network, which is an acknowledged shortcut of the initial attack vectors, e.g. phishing attack. This is for two reasons:
+The C2 host is raven0 ([raven0 C2 setup](#raven0-c2-setup)), each of the others is raven^^*n^^*, where *n* is assigned automatically by ([remote raven setup](#remote-raven-setup)). Each remote needs to be added to the target network, which is an acknowledged shortcut of the initial attack vectors, e.g. phishing attack. This is for two reasons:
 * Legal considerations
 * Time considerations
 
