@@ -36,28 +36,28 @@ _________________________________
 
 ### 1.1 Authorized Activities
 
-This authorization explicitly permits the following activities that would otherwise be prohibited under applicable computer crime laws:
+Unless crossed out below, this authorization explicitly permits the following activities that would otherwise be prohibited under applicable computer crime laws:
 
 **NETWORK ACCESS:**
-- [ ] Unauthorized access to wireless networks
-- [ ] Unauthorized access to wired networks
-- [ ] Network reconnaissance and enumeration
-- [ ] Vulnerability scanning and exploitation
-- [ ] Network traffic analysis and interception
-- [ ] Deployment and operation of testing equipment
+- Unauthorized access to wireless networks
+- Unauthorized access to wired networks
+- Network reconnaissance and enumeration
+- Vulnerability scanning and exploitation
+- Network traffic analysis and interception
+- Deployment and operation of testing equipment
 
 **DEVICE ACCESS:**
-- [ ] Unauthorized access to connected devices
-- [ ] Exploitation of device vulnerabilities
-- [ ] Device enumeration and fingerprinting
-- [ ] IoT device testing and manipulation
-- [ ] Mobile device network interaction testing
+- Unauthorized access to connected devices
+- Exploitation of device vulnerabilities
+- Device enumeration and fingerprinting
+- IoT device testing and manipulation
+- Mobile device network interaction testing
 
 **SOCIAL ENGINEERING:**
-- [ ] Email-based social engineering attacks
-- [ ] Phone-based social engineering attacks
-- [ ] Physical social engineering (if applicable)
-- [ ] Targeting of authorized personnel (see Section 2)
+- Email-based social engineering attacks
+- Phone-based social engineering attacks
+- Physical social engineering (if applicable)
+- Targeting of authorized personnel (see Section 2)
 
 ### 1.2 Legal Protection
 
@@ -74,6 +74,7 @@ This authorization is intended to provide complete legal protection under:
 
 **HOUSEHOLD PERSONNEL:**
 - [ ] Executive family members (adults 18+ only)
+  Names of family members hereby excluded: ___________________________________________________________________________________________________
 - [ ] Household staff (cleaners, nannies, gardeners, maintenance)
 - [ ] Executive assistants working from home
 - [ ] Security personnel
